@@ -1,0 +1,23 @@
+{
+    "name": "mortimer/db-setup",
+    "description": "Laravel 4 package that adds the missing artisan commands db:setup, db:create, db:drop",
+    "keywords": ["laravel", "artisan", "db", "database"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pascal Hurni",
+            "email": "phi@ruby-reactive.org"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": ">=4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mortimer\\DbSetup\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
