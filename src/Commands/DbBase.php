@@ -7,7 +7,7 @@ abstract class DbBase extends Command {
     protected function doStatement($statement, $data)
     {
         // Workaround, using DB::Statement with bindings fails for an unknown reason
-        $sql = str_replace('?', $data[0], $statement);
+        $sql = str_replace('?', \DB::connection('dbsetup')->getQueryGrammar()->wrapTable($data[0]), $statement);
         
         return \DB::connection('dbsetup')->statement($sql);
     }
